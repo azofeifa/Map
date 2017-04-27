@@ -1,4 +1,4 @@
-__author__ = 'Jonathan Rubin'
+__author__ = 'Joey Azofeifa'
 #Scripts adapted from Josephina Hendrix and Mary Allen
 
 #Required modules:
@@ -32,7 +32,7 @@ import millions_mapped
 fullpath = sys.argv[1]
 
 #Give email address where job e-mails will be sent
-email="joru1876@colorado.edu"
+email="joseph.azofeifa@colorado.edu"
 
 #Specify genome
 genome = 'hg19'
@@ -44,7 +44,7 @@ genome = 'hg19'
 #Used for ChIP-Seq
 # bowtieoptions = "-k 1 -n 2 -l 36 --best"
 #Used for GRO-Seq
-bowtieoptions = "--very-sensitive"
+bowtieoptions = "--very-sensitive -p 32"
 # bowtieoptions = "-p 4 -S"
 #Used for ATAC-Seq
 #bowtieoptions = "-X2000"
@@ -172,8 +172,6 @@ def run():
             with open(newpath + 'bowtie2/spikeins/' + file1) as F:
                 for line in F:
                     print line
-
-
 
     #Writes script files based on genome and bowtie index
     print "done\nWriting script files..."
